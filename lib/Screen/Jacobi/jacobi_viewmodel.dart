@@ -1,24 +1,19 @@
 import 'dart:async';
 import 'dart:developer';
+import 'dart:math';
 
 import 'package:matmahoc/Heleper/tinh.dart';
 
-class NhanBinhPhuongCoLapViewModel {
+
+class JacoBiViewModel {
   StreamController<int> _nhanBinhPhuong = StreamController<int>();
 
   Stream<int> get nhanBinhPhuong => _nhanBinhPhuong.stream;
-  void tinh(int a,int k,int n) {
+  void tinh(int a,int b) {
 
-    List<int> mg=List.generate(100, (index) => -1);
-    int i=0;
-    int coso=k;
-    while(coso>0){
-      mg[i]=coso%2;
-      coso=(coso/2).floor();
-      i++;
-    }
-    _nhanBinhPhuong.sink.add(binhPhuong(a, k, n, i, mg));
+    _nhanBinhPhuong.sink.add(1);
   }
+
   int binhPhuong(int a, int k, int n, int i, List mg) {
     int b = 1;
     if (k == 0) {
