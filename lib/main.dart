@@ -6,7 +6,10 @@ import 'package:matmahoc/Screen/GiaTriLonNhatZ83/gia_tri_lon_nhat_screen.dart';
 import 'package:matmahoc/Screen/Jacobi/jacobi_screen.dart';
 import 'package:matmahoc/Screen/MaHill/ma_hill_screen.dart';
 import 'package:matmahoc/Screen/MaRSA/ma_rsa_screen.dart';
+import 'package:matmahoc/Screen/Merkle_Hellman/merkle_hellman_screen.dart';
+import 'package:matmahoc/Screen/MixColumn/mix_colunm_screen.dart';
 import 'package:matmahoc/Screen/PhanTuSinhTrongZn/phan_tu_sinh_screen.dart';
+import 'package:matmahoc/Screen/SingnelElgamal/singel_elgamal_screen.dart';
 import 'package:matmahoc/Screen/TimNghicDao/tim_nghich_dao_screen.dart';
 import 'package:matmahoc/Screen/ma_affine/affine_screen.dart';
 import 'package:matmahoc/Screen/ma_dich_vong/ma_dich_vong_screen.dart';
@@ -142,8 +145,34 @@ class _MyHomePageState extends State<MyHomePage> {
                     pageBuilder: (_, __, ___) => JacobiScreen()),
               );
             }),
-            CellWidget(title: 'Nhân bình phương có lặp', onTap: (){}),
-            CellWidget(title: 'Nhân bình phương có lặp', onTap: (){}),
+            CellWidget(title: 'Signel Elgamal', onTap: (){
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => SingelElgamalScreen()),
+              );
+            }),
+            CellWidget(title: 'Mix Colunm', onTap: (){
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => MixColumnScreen()),
+              );
+            }),
+            CellWidget(title: 'Merkle_HellMan', onTap: (){
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => MerkleHellManScreen()),
+              );
+            }),
+            CellWidget(title: 'Mix Colunm', onTap: (){
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => MixColumnScreen()),
+              );
+            }),
           ],
         ),
       )
@@ -170,7 +199,7 @@ class CellWidget extends StatelessWidget {
           alignment: Alignment.centerLeft,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(title),
+            child: Text(title,style: TextStyle(fontSize: 20),),
           ),
         ),
       ),

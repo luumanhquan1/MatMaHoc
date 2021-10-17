@@ -48,7 +48,8 @@ class _NhanBinhPhuongCoLapScreenState extends State<MaHillcreen> {
               for(int j=0;j<doDai;j++)
                 InPutMaxtrix(i: i, j: j, onTap: (value){
                     viewModel.setIndexMaTran(i, j, int.parse(value));
-                }),
+                }
+                ),
             BaseSearchBar(
               controller: mess,
               title: 'Kí tự',

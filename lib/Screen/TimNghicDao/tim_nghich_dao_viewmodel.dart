@@ -29,11 +29,11 @@ class TimNghichDaoViewModel {
         x1=x;
         y2=y1;
         y1=y;
-        _nhanBinhPhuong.sink.add(x2);
         if(b<=0){
           break;
         }
       }
+      _nhanBinhPhuong.sink.add(x2);
       return TinhA.mod(x1,b);
     }
     
