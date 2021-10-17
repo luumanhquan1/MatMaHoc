@@ -5,6 +5,9 @@ import 'package:matmahoc/Screen/GiaTriLonNhatZ83/gia_tri_lon_nhat_screen.dart';
 import 'package:matmahoc/Screen/MaHill/ma_hill_screen.dart';
 import 'package:matmahoc/Screen/MaRSA/ma_rsa_screen.dart';
 import 'package:matmahoc/Screen/TimNghicDao/tim_nghich_dao_screen.dart';
+import 'package:matmahoc/Screen/ma_affine/affine_screen.dart';
+import 'package:matmahoc/Screen/ma_dich_vong/ma_dich_vong_screen.dart';
+import 'package:matmahoc/Screen/ma_vigenere/ma_vigenere_screen.dart';
 
 import 'Screen/NhanBnhPhuongCoLap/nhan_binh_phuong_co_lap.dart';
 
@@ -96,8 +99,27 @@ class _MyHomePageState extends State<MyHomePage> {
                     pageBuilder: (_, __, ___) => TimNghichDaoScreen()),
               );
             }),
-            CellWidget(title: 'Nhân bình phương có lặp', onTap: (){}),
-            CellWidget(title: 'Nhân bình phương có lặp', onTap: (){}),
+            CellWidget(title: 'Mã dịch vòng', onTap: (){
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => MaDichVongScreen()),
+              );
+            }),
+            CellWidget(title: 'Mã Affine', onTap: (){
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => MaAffineScreen()),
+              );
+            }),
+            CellWidget(title: 'Mã Vigenere', onTap: (){
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => MaVigenereScreen()),
+              );
+            }),
             CellWidget(title: 'Nhân bình phương có lặp', onTap: (){}),
             CellWidget(title: 'Nhân bình phương có lặp', onTap: (){}),
             CellWidget(title: 'Nhân bình phương có lặp', onTap: (){}),
