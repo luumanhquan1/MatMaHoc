@@ -1,9 +1,12 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:matmahoc/Screen/CapCuaPhanTu/cap_cua_phan_tu_screen.dart';
 import 'package:matmahoc/Screen/GiaTriLonNhatZ83/gia_tri_lon_nhat_screen.dart';
+import 'package:matmahoc/Screen/Jacobi/jacobi_screen.dart';
 import 'package:matmahoc/Screen/MaHill/ma_hill_screen.dart';
 import 'package:matmahoc/Screen/MaRSA/ma_rsa_screen.dart';
+import 'package:matmahoc/Screen/PhanTuSinhTrongZn/phan_tu_sinh_screen.dart';
 import 'package:matmahoc/Screen/TimNghicDao/tim_nghich_dao_screen.dart';
 import 'package:matmahoc/Screen/ma_affine/affine_screen.dart';
 import 'package:matmahoc/Screen/ma_dich_vong/ma_dich_vong_screen.dart';
@@ -90,7 +93,19 @@ class _MyHomePageState extends State<MyHomePage> {
                     pageBuilder: (_, __, ___) => MaHillcreen()),
               );
             }),
-            CellWidget(title: 'Phân tử sinh nhỏ nhất', onTap: (){
+            CellWidget(title: 'Cấp của phần tử trong Z(n)', onTap: (){
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => CapCuaPhanTuScreen()),
+              );
+            }),
+            CellWidget(title: 'Phần tử sinh trong Z(n)', onTap: (){
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => PhanTuSinhScreen()),
+              );
             }),
             CellWidget(title: 'Tìm nghịch đảo', onTap: (){
               Navigator.push(
@@ -120,7 +135,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     pageBuilder: (_, __, ___) => MaVigenereScreen()),
               );
             }),
-            CellWidget(title: 'Nhân bình phương có lặp', onTap: (){}),
+            CellWidget(title: 'Tính jacobi(A/b)', onTap: (){
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => JacobiScreen()),
+              );
+            }),
             CellWidget(title: 'Nhân bình phương có lặp', onTap: (){}),
             CellWidget(title: 'Nhân bình phương có lặp', onTap: (){}),
           ],
