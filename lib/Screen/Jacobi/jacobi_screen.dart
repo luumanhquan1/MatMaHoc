@@ -33,7 +33,7 @@ class _NhanBinhPhuongCoLapScreenState extends State<JacobiScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Tìm nghịch đảo'),
+        title: Text('Jacobi'),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 16),
