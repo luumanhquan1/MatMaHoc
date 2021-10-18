@@ -33,7 +33,7 @@ class _NhanBinhPhuongCoLapScreenState extends State<MaHillcreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Ma Hill'),
+        title: Text('Mã Hill'),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 16),
@@ -46,7 +46,7 @@ class _NhanBinhPhuongCoLapScreenState extends State<MaHillcreen> {
 
             for(int i=0;i<doDai;i++)
               for(int j=0;j<doDai;j++)
-                InPutMaxtrix(i: i, j: j, onTap: (value){
+                InPutMaxtrix(i: j, j: i, onTap: (value){
                     viewModel.setIndexMaTran(i, j, int.parse(value));
                 }
                 ),

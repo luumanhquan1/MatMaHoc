@@ -16,6 +16,7 @@ import 'package:matmahoc/Screen/ma_dich_vong/ma_dich_vong_screen.dart';
 import 'package:matmahoc/Screen/ma_vigenere/ma_vigenere_screen.dart';
 
 import 'Screen/NhanBnhPhuongCoLap/nhan_binh_phuong_co_lap.dart';
+import 'Screen/euclide_mo_rong/euclide_mo_rong_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -73,6 +74,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   PageRouteBuilder(
                   pageBuilder: (_, __, ___) => NhanBinhPhuongCoLapScreen()),
+              );
+            }),
+            CellWidget(title: 'Euclide mở rộng', onTap: (){
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => MaEMRScreen()),
               );
             }),
             CellWidget(title: 'Mã RSA', onTap: (){
@@ -145,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     pageBuilder: (_, __, ___) => JacobiScreen()),
               );
             }),
-            CellWidget(title: 'Signel Elgamal', onTap: (){
+            CellWidget(title: 'Signal Elgamal', onTap: (){
               Navigator.push(
                 context,
                 PageRouteBuilder(
@@ -166,13 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     pageBuilder: (_, __, ___) => MerkleHellManScreen()),
               );
             }),
-            CellWidget(title: 'Mix Colunm', onTap: (){
-              Navigator.push(
-                context,
-                PageRouteBuilder(
-                    pageBuilder: (_, __, ___) => MixColumnScreen()),
-              );
-            }),
+
           ],
         ),
       )
