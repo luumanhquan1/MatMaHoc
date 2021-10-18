@@ -27,6 +27,7 @@ class MerkleHellManViewModel {
  List<int> hoanvi = [];
   Stream<khoa> get nhanBinhPhuong => _nhanBinhPhuong.stream;
   void tinh(int n,int M,int W,List<int> daysieutang,List<int> hoanvi,String m) {
+  //  _nhanBinhPhuong.sink.add( khoa('','', '', ''));
     this.n=n;
     this.M=M;
     this.W=W;
@@ -86,7 +87,7 @@ class MerkleHellManViewModel {
   }
   log(arr.toString());
     List a=List.generate(arr.length, (index) => null);
-    for(int i=0;i<arr.length;i++){
+    for(int i=arr.length-1;i>=0;i--){
       a[i]=arr[hoanvi[i]-1];
     }
    return a.join();
