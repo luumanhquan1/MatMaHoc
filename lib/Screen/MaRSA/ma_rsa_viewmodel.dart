@@ -76,14 +76,20 @@ class MaRSAViewModel {
     return mod(x1, p);
   }
 
-  void tinh(int q, int b, int e,int c) {
+  void tinh(bool maHoa,int q, int b, int e,int c,int m) {
       int phi;
 
   int n = b*q;
   phi = (b-1)*(q-1);
   int d= Euclide(e,phi);
+if(maHoa)
+  {
+    _nhanBinhPhuong.sink.add(nhanlap(m,e,n));
+  }else
+    {
+      _nhanBinhPhuong.sink.add(nhanlap(c,d,n));
+    }
 
-    _nhanBinhPhuong.sink.add(nhanlap(c,d,n));
   }
 
   int binhPhuong(int a, int k, int n, int i, List mg) {

@@ -42,6 +42,14 @@ class _NhanBinhPhuongCoLapScreenState extends State<MixColumnScreen> {
             SizedBox(
               height: 20,
             ),
+            Text('Sau cột cần tính',
+              style: TextStyle(fontSize: 20),),
+            SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              height: 20,
+            ),
             BaseSearchBar(
               controller: a,
               title: 'a',

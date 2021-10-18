@@ -49,6 +49,11 @@ class _NhanBinhPhuongCoLapScreenState extends State<MerkleHellManScreen> {
             SizedBox(
               height: 20,
             ),
+            Text('Sau khi nhập độ dài nhấn enter để nhập các phần tử',
+            style: TextStyle(fontSize: 20),),
+            SizedBox(
+              height: 20,
+            ),
             BaseSearchBar(
               controller: doDaiDaiSieuTang,
               title: 'độ dài dãy siêu tăng',

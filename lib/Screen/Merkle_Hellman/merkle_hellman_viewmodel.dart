@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:developer';
-import 'dart:math';
+//import 'dart:math';
 
 class GenKey {
   List<int?> ke;
@@ -72,9 +72,11 @@ class MerkleHellManViewModel {
     int W=kd.kd[2];
     List<int> daysieutang=kd.kd[3];
    int d = c*pown(W,M)%M;
+   log('d= $d');
   int S = d;
   List arr = [];
-  for(int i=0;i<daysieutang.length;i++ ) {
+  log(daysieutang.toString());
+  for(int i=daysieutang.length-1;i>=0;i-- ) {
     if (S >= daysieutang[i]) {
       arr.add('1');
       S = S - daysieutang[i];
@@ -82,6 +84,7 @@ class MerkleHellManViewModel {
       arr.add('0');
     }
   }
+  log(arr.toString());
     List a=List.generate(arr.length, (index) => null);
     for(int i=0;i<arr.length;i++){
       a[i]=arr[hoanvi[i]-1];
