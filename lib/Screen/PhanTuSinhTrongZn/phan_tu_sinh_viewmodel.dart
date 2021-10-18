@@ -75,7 +75,7 @@ class PhanTuSinhViewModel {
     int phi_n = phi(n);
     List<int> a = prime_factors(phi_n);
     int check = 0;
-    for(int i=2;i<phi_n;i++) {
+    for(int i=2;i<=phi_n;i++) {
       for (var p in a) {
         if ((pown(i, (phi_n / p).toInt(), n)) == 1) {
           check = 0;
